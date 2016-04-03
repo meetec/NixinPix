@@ -10,4 +10,4 @@ sed -ie "s/index.html index.cgi index.pl index.php/index.php index.html index.cg
 printf '%s\n%s\n%s\n' '<?php' 'phpinfo();' '?>' >> /var/www/html/test.php
 sudo service apache2 restart
 var=$(ip addr | grep 'state UP' -A2 | tail -n1 | awk '{print $2}' | cut -f1  -d'/')
-echo "U can now type in browiser this IP $var , to see your page."
+echo "U can now type in browiser this IP $var/test.php , to see php test page."
